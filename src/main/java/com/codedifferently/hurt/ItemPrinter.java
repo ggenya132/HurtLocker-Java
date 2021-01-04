@@ -22,6 +22,10 @@ public class ItemPrinter {
                 stringBuilder.append(getRow(itemFrequency.getKey(), itemFrequency.getValue(), false));
             }
         };
+        stringBuilder.append("\n");
+        stringBuilder.append("Errors         \t \t seen: ");
+        stringBuilder.append(ErrorCounter.getInstance().getErrorCount());
+        stringBuilder.append(" times");
         return stringBuilder.toString();
     }
     private String getRowSeperator(boolean isTopLevel){
